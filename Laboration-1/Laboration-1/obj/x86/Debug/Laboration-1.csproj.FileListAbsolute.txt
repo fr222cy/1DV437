@@ -26,3 +26,31 @@ c:\users\filip\documents\visual studio 2013\Projects\Laboration-1\Laboration-1\o
 c:\users\filip\documents\visual studio 2013\Projects\Laboration-1\Laboration-1\bin\Windows\Debug\Content\black.png
 c:\users\filip\documents\visual studio 2013\Projects\Laboration-1\Laboration-1\bin\Windows\Debug\Content\white.png
 c:\users\filip\documents\visual studio 2013\Projects\Laboration-1\Laboration-1\bin\Windows\Debug\Content\player.png
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\obj\x86\Debug\Laboration-1.exe
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\obj\x86\Debug\Laboration-1.pdb
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\Content\black.png
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\Content\player.png
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\Content\white.png
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\Laboration-1.exe
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\Laboration-1.pdb
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\MonoGame.Framework.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Filip\Desktop\Projekt\Spelprogrammering\Labb1\1DV437\Laboration-1\Laboration-1\obj\x86\Debug\Laboration-1.csprojResolveAssemblyReference.cache

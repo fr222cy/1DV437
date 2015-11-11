@@ -24,8 +24,8 @@ namespace Laboration_1
             camera = new Camera();
             graphics = new GraphicsDeviceManager(this);
            
-            graphics.PreferredBackBufferWidth = 320;
-            graphics.PreferredBackBufferHeight = 240;
+            graphics.PreferredBackBufferWidth = 640;
+            graphics.PreferredBackBufferHeight = 640;
             Content.RootDirectory = "Content";
         }
 
@@ -50,7 +50,7 @@ namespace Laboration_1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            camera.scalekiosk(graphics);   
+            camera.scaleChess(graphics);   
             blackSquare = Content.Load<Texture2D>("black.png");
             whiteSquare = Content.Load<Texture2D>("white.png");
             player = Content.Load<Texture2D>("player.png");
@@ -92,18 +92,13 @@ namespace Laboration_1
             GraphicsDevice.Clear(Color.CornflowerBlue);
         
             spriteBatch.Begin();
-
-      
-
-
+             
             int temp = 0;
+
             for (int x = 0; x < 8; x++)
             {
                 for (int y = 0; y < 8; y++)
-                {
-
-                    
-                   
+                {                                       
                         if (temp % 2 == 0)
                         {
                             spriteBatch.Draw(whiteSquare, camera.getVisualCoord(x, y), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
@@ -112,20 +107,15 @@ namespace Laboration_1
                         {
                             spriteBatch.Draw(blackSquare, camera.getVisualCoord(x, y), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
                         }
-                        //spriteBatch.Draw(whiteSquare, camera.getVisualCoord(x, y), null, Color.White, 0, new Vector2(0, 0), 1.0f, SpriteEffects.None, 0);
+                        
                         temp++;
                 }
-                temp++;
-
-               
+                temp++;               
             }
+            spriteBatch.Draw(player, camera.getRotated(2, 7), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
+            spriteBatch.End();
 
 
-            spriteBatch.Draw(player, camera.getRotated(0, 0), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
-            
-                
-
-                spriteBatch.End();
             base.Draw(gameTime);
         }
     }
