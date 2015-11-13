@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Game1.Model;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -10,22 +11,24 @@ namespace Game1
     public class MasterController : Game
     {
         BallView bv;
+        BallSimulation bs;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        Texture2D ball;
+        Texture2D gameArea;
         public MasterController()
-        {
-            BallView bv = new BallView();
+        {           
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            graphics.PreferredBackBufferWidth = 640;
+            graphics.PreferredBackBufferHeight = 480;
+     
+         
+
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
+        
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -34,53 +37,46 @@ namespace Game1
             base.Initialize();
         }
 
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+        //http://stackoverflow.com/questions/5751732/draw-rectangle-in-xna-using-spritebatch
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            ball = Content.Load<Texture2D>("ball");
+            gameArea = new Texture2D(GraphicsDevice, 1, 1);
+            gameArea.SetData(new[] { Color.Yellow });
 
+            
+            bv = new BallView(GraphicsDevice.Viewport);
+            bs = new BallSimulation();
+           
             // TODO: use this.Content to load your game content here
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
+     
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+       
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-
+            bs.ballMovement((float)gameTime.ElapsedGameTime.TotalSeconds);
             base.Update(gameTime);
         }
 
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public override void Draw(GameTime gameTime)
+    
+        protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-
-            bv.Draw(gameTime, spriteBatch, graphics);
+            bv.drawGameArea(gameArea, spriteBatch);
+            bv.Draw(gameTime, spriteBatch, graphics, ball, bs);
             base.Draw(gameTime);
         }
 

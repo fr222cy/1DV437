@@ -112,7 +112,7 @@ namespace Laboration_1
                 }
                 temp++;               
             }
-            spriteBatch.Draw(player, camera.getRotated(2, 7), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
+            spriteBatch.Draw(player, camera.getRotated(2, 6), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
             spriteBatch.End();
 
 
