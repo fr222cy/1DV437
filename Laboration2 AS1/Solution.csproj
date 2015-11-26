@@ -45,6 +45,8 @@
     <Compile Include="AS1\SplitterParticle.cs" />
     <Compile Include="AS2\SmokeParticle.cs" />
     <Compile Include="AS2\SmokeSystem.cs" />
+    <Compile Include="AS3\AnimationSystem.cs" />
+    <Compile Include="AS3\Explosion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Camera.cs" />
@@ -58,6 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\explosion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\particlesmoke.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
