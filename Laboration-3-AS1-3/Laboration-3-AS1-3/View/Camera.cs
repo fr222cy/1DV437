@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Laboration_2_AS4
+namespace Laboration_3_AS_3.View
 {
     class Camera
     {

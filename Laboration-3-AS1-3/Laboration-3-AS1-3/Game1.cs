@@ -2,30 +2,19 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Laboration_1
+namespace Laboration_3
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class ApplicationController : Game
+    public class Game1 : Game
     {
-
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Camera camera;
-        
 
-        Texture2D player;
-        Texture2D whiteSquare;
-        Texture2D blackSquare;
-
-        public ApplicationController()
+        public Game1()
         {
-            camera = new Camera();
             graphics = new GraphicsDeviceManager(this);
-           
-            graphics.PreferredBackBufferWidth = 640;
-            graphics.PreferredBackBufferHeight = 640;
             Content.RootDirectory = "Content";
         }
 
@@ -38,7 +27,7 @@ namespace Laboration_1
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            
+
             base.Initialize();
         }
 
@@ -50,10 +39,7 @@ namespace Laboration_1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            camera.scaleChess(graphics);   
-            blackSquare = Content.Load<Texture2D>("black.png");
-            whiteSquare = Content.Load<Texture2D>("white.png");
-            player = Content.Load<Texture2D>("player.png");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -81,8 +67,6 @@ namespace Laboration_1
             base.Update(gameTime);
         }
 
-      
-
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -90,31 +74,8 @@ namespace Laboration_1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-        
-            spriteBatch.Begin();
-             
-            int temp = 0;
 
-            for (int x = 0; x < 8; x++)
-            {
-                for (int y = 0; y < 8; y++)
-                {                                       
-                        if (temp % 2 == 0)
-                        {
-                            spriteBatch.Draw(whiteSquare, camera.getVisualCoord(x, y), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
-                        }
-                        else
-                        {
-                            spriteBatch.Draw(blackSquare, camera.getVisualCoord(x, y), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
-                        }
-                        
-                        temp++;
-                }
-                temp++;               
-            }
-            spriteBatch.Draw(player, camera.getRotated(1, 1), null, Color.White, 0, new Vector2(0, 0), camera.scale, SpriteEffects.None, 0);
-            spriteBatch.End();
-
+            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }

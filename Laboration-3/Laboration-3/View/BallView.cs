@@ -5,10 +5,10 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Game1.Model;
+using Laboration_3.Model;
 
 
-namespace Game1
+namespace Laboration_3.View
 {
     class BallView
     {
@@ -21,15 +21,15 @@ namespace Game1
             camera = new Camera(port);
         }
 
-        public void Draw( SpriteBatch spriteBatch, GraphicsDeviceManager graphics, Texture2D ball, BallSimulation bs)
+        public void Draw(SpriteBatch spriteBatch, Texture2D ball, BallSimulation bs)
         {
-         
-            float scale = camera.getScale(bs.ballRadius(), ball.Bounds.Width);
+
+            float scale = camera.getScale(bs.ballRadius(), ball.Width);
 
             spriteBatch.Begin();
 
-                spriteBatch.Draw(ball, camera.modelToViewCoords(bs.position()), ball.Bounds, Color.White, 0, new Vector2(ball.Bounds.Width / 2, ball.Bounds.Height / 2), scale, SpriteEffects.None, 0);
-             
+            spriteBatch.Draw(ball, camera.getViewCoords(bs.position(), ball.Width, ball.Height), ball.Bounds, Color.White, 0, Vector2.Zero, scale, SpriteEffects.None, 0);
+
             spriteBatch.End();
         }
 
@@ -37,14 +37,14 @@ namespace Game1
         public void drawGameArea(Texture2D gameArea, SpriteBatch spriteBatch)
         {
 
-           
-            int gameAreaScaled = (int)camera.scale;
+            int areaWidth = (int)camera.scaleX;
+            int areaHeight = (int)camera.scaleY;
+            
             int border = (int)camera.getBorder();
 
             spriteBatch.Begin();
 
-                spriteBatch.Draw(gameArea, new Rectangle(border, border , gameAreaScaled , gameAreaScaled), Color.White);
-             
+            spriteBatch.Draw(gameArea, new Rectangle(border, border, areaWidth, areaHeight), Color.White);
 
             spriteBatch.End();
 

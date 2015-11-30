@@ -74,7 +74,7 @@ namespace Game1
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             bv.drawGameArea(gameArea, spriteBatch);
-            bv.Draw(gameTime, spriteBatch, graphics, ball, bs);
+            bv.Draw(spriteBatch, graphics, ball, bs);
             base.Draw(gameTime);
         }
 

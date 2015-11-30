@@ -22,8 +22,8 @@ namespace Laboration_2_AS4
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = 500;
-            graphics.PreferredBackBufferWidth = 500;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 600;
         }
 
   

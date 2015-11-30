@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Game1.Model
+namespace Laboration_3.Model
 {
     class Ball
     {
@@ -17,7 +17,7 @@ namespace Game1.Model
         public Ball()
         {
             position = new Vector2(0.5f, 0.3f);
-            radius = 0.05f;
+            radius = 0.10f;
             speed = new Vector2(0.5f, 0.3f);
         }
 
