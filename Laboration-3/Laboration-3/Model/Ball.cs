@@ -14,11 +14,13 @@ namespace Laboration_3.Model
         Vector2 position;
         float radius;
         Vector2 speed;
-        public Ball()
+        
+        public Ball(Random rand)
         {
-            position = new Vector2(0.5f, 0.3f);
-            radius = 0.10f;
-            speed = new Vector2(0.5f, 0.3f);
+            position = new Vector2((float)rand.NextDouble(), (float)rand.NextDouble());
+            radius = 0.04f;
+            speed = new Vector2((float)rand.NextDouble(), (float)rand.NextDouble());
+            
         }
 
         public Vector2 getPostion()
@@ -38,6 +40,11 @@ namespace Laboration_3.Model
             position.Y = y;
         }
 
+        public void stopBall()
+        {
+            speed = new Vector2(0, 0);
+        }
+
         public float getRadius()
         {
             return radius;
@@ -45,17 +52,11 @@ namespace Laboration_3.Model
 
         public void setXDirection()
         {      
-
-             
-           speed.X = -(speed.X);
-
-               
+           speed.X = -(speed.X);  
         }
         public void setYDirection( )
         {
-
             speed.Y = -(speed.Y);
-
         }
 
 

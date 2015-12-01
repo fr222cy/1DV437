@@ -34,7 +34,7 @@ namespace Laboration_3.View
 
         public Vector2 getViewCoords(Vector2 position, float textureWidth, float textureHeight )
         {
-            float screenX =  ((scaleX * position.X) - (textureWidth / 2) * scale) + border ;
+            float screenX =  ((scaleX * position.X) - (textureWidth / 2) * scale) + border  ;
             float screenY =  ((scaleY * position.Y) - (textureHeight / 2) * scale) + border;
 
             return new Vector2(screenX, screenY);
@@ -46,11 +46,7 @@ namespace Laboration_3.View
             float logicalX = (position.X / scaleX) - border /scaleX ;
             float logicalY = (position.Y / scaleY) - border /scaleY ;
 
-
-
-            Console.WriteLine("SX = " + position.X + " SY = " + position.Y);
-            Console.WriteLine();
-            Console.WriteLine("LX = " + logicalX + " LY = " + logicalY);
+           
             
             return new Vector2(logicalX, logicalY);
         }

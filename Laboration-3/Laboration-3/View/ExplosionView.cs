@@ -31,13 +31,13 @@ namespace Laboration_3.View
 
         public ExplosionView(Viewport port, Vector2 startPosition, SoundEffect blast)
         {
-            this.size = 0.1f;
+            this.size = 0.08f;
             this.spawnTime = 0.1f;
             blast.Play();
             camera = new Camera(port);
             this.startPosition = camera.getClickModelCoords(startPosition);
 
-
+            
             splitterParticles = new Splitter[MAX_SPLITTER_PARTICLES];
 
             for (int i = 0; i < MAX_SPLITTER_PARTICLES; i++)

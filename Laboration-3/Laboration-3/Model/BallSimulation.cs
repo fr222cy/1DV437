@@ -12,48 +12,65 @@ namespace Laboration_3.Model
     class BallSimulation
     {
         Ball ball;
-     
-        public BallSimulation()
+        private float hitRadius;
+        private float x;
+        private float y;
+        public BallSimulation(int seed)
         {
-            ball = new Ball();
+            hitRadius = 0.1f;
+            Random rand = new Random(seed);
+            ball = new Ball(rand);
         }
 
         public void ballMovement(float time)
         {
-            float x = ball.getPostion().X;
-            float y = ball.getPostion().Y;
+            x = ball.getPostion().X;
+            y = ball.getPostion().Y;
 
-            Console.WriteLine(x +" "+ y);
-            
             ball.setPosition(time);
+            checkCollision();
+        }
 
-            if(x + ball.getRadius() > 1)
+        public void checkCollision()
+        {
+            if (x + ball.getRadius() > 1)
             {
                 ball.setPosition1(1 - ball.getRadius(), y);
                 ball.setXDirection();
-               
+
             }
-            else if (x - ball.getRadius() < 0 )
+            else if (x - ball.getRadius() < 0)
             {
                 ball.setPosition1(0 + ball.getRadius(), y);
                 ball.setXDirection();
             }
 
-            if (y + ball.getRadius() > 1 )
+            if (y + ball.getRadius() > 1)
             {
                 ball.setPosition1(x, 1 - ball.getRadius());
-          
+
                 ball.setYDirection();
             }
-            else if (y - ball.getRadius() < 0 )
+            else if (y - ball.getRadius() < 0)
             {
                 ball.setPosition1(x, 0 + ball.getRadius());
-           
                 ball.setYDirection();
             }
         }
 
-        
+        public void isHit(Vector2 position)
+        {
+            if (x >= position.X - hitRadius && x <= position.X + hitRadius &&
+                y >= position.Y - hitRadius && x <= position.Y + hitRadius)
+            {
+                ball.stopBall();
+            }
+        }
+
+        public float getHitRadius()
+        {
+            return hitRadius;
+        }
 
         public float ballRadius()
         {

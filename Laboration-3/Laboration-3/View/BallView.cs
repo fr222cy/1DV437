@@ -24,11 +24,11 @@ namespace Laboration_3.View
         public void Draw(SpriteBatch spriteBatch, Texture2D ball, BallSimulation bs)
         {
 
-            float scale = camera.getScale(bs.ballRadius(), ball.Width);
+            float scale = camera.getScale(bs.ballRadius(), ball.Width/2);
 
             spriteBatch.Begin();
 
-            spriteBatch.Draw(ball, camera.getViewCoords(bs.position(), ball.Width, ball.Height), ball.Bounds, Color.White, 0, Vector2.Zero, scale, SpriteEffects.None, 0);
+            spriteBatch.Draw(ball, camera.getViewCoords(bs.position(), ball.Width, ball.Height), ball.Bounds, Color.White, 0, Vector2.Zero , scale, SpriteEffects.None, 0);
 
             spriteBatch.End();
         }
