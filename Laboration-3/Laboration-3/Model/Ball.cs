@@ -10,7 +10,7 @@ namespace Laboration_3.Model
 {
     class Ball
     {
-
+        
         Vector2 position;
         float radius;
         Vector2 speed;

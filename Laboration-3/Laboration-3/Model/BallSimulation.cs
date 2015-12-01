@@ -60,6 +60,7 @@ namespace Laboration_3.Model
 
         public void isHit(Vector2 position)
         {
+            // Quite buggy solution..
             if (x >= position.X - hitRadius && x <= position.X + hitRadius &&
                 y >= position.Y - hitRadius && x <= position.Y + hitRadius)
             {
